@@ -1,0 +1,33 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login Page</h2>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form class="border p-3"
+              asp-controller="User"
+              asp-action="Login"
+              method="post">
+
+            <label asp-for="Email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="Email" required />
+
+            <label class="form-label">Password:</label>
+            <input type="password" class="form-control" name="Password" required />
+
+            <button type="submit" class="btn btn-primary mt-3">Login</button>
+        </form>
+
+        <div class="mt-3">
+            <p>
+                Don’t have an account?
+                <a asp-controller="User" asp-action="Register">Register here</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

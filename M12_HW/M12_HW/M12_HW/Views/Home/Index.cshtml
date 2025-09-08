@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+<h1>Home Page</h1>
+
+<a class="btn btn-dark" 
+    asp-controller="Product" 
+    asp-action="Index"
+>Read Products</a>
+<a class="btn btn-dark"
+   asp-controller="Cart"
+   asp-action="Index">Show Cart</a>
+<a class="btn btn-dark"
+   asp-controller="User"
+   asp-action="Login">Have an account? Log in</a>
+<a class="btn btn-dark"
+   asp-controller="User"
+   asp-action="Login">Create an account</a>
